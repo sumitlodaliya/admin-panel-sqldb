@@ -1,0 +1,87 @@
+<%- include('header') %>
+
+
+  <div class="page-wrapper">
+
+
+
+
+
+
+    <html>
+
+    <body>
+      <div class="container crud-table" ng-app="myApp" ng-controller="namesCtrl">
+        <div class="clearfix">
+          <div class="form-inline pull-left">
+            <a href="/admin/" class="btn btn-success" ng-click="addUser()"><span class="glyphicon glyphicon-plus">
+              </span>Add more user</a>
+          </div>
+
+        </div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th ng-click="orderBy('country')">Name</th>
+              <th ng-click="orderBy('salary')">Email</th>
+              <th ng-click="orderBy('email')">Gender</th>
+              <th ng-click="orderBy('Contact')">Contact</th>
+              <th ng-click="orderBy('Course')">Course</th>
+              <th ng-click="orderBy('Fees')">Fees</th>
+              <th ng-click="orderBy('Action')">Action</th>
+            </tr>
+          </thead>
+          <tbody class="text-center">
+            <% for (let i in record){ %>
+
+              <tr>
+                <td>
+                  <%=record[i].name %>
+                </td>
+                <td>
+                  <%=record[i].email %>
+                </td>
+                <td>
+                  <%=record[i].gender %>
+                </td>
+                <td>
+                  <%=record[i].contact %>
+                </td>
+                <td>
+                  <%=record[i].course %>
+                </td>
+                <td>
+                  <%=record[i].fees %>
+                </td>
+                <td>
+                  <a href="/admin/deleteData/<%= record[i].id %>" class="btn btn-danger"
+                    ng-click="deleteUser(user)">Delete</a>
+
+                  <a href="/admin/editData/<%= record[i].id %>" class="btn btn-primary"
+                    ng-click="editUser(user)">Edit</a>
+                </td>
+
+                <!-- <td><a href="/admin/deleteData/<%= record[i].id %>">Delete</a></td> -->
+              </tr>
+              <% } %>
+
+
+                <!-- <tr class="text-left">
+            <td colspan="2"> <b>Total</b></td>
+            <td class="text-center">{{ resultUser | totalSalary: 'salary' }}</td>
+            <td colspan="3"></td>
+          </tr> -->
+          </tbody>
+        </table>
+
+
+
+      </div>
+    </body>
+
+    </html>
+
+
+  </div>
+
+  <%- include('footer') %>

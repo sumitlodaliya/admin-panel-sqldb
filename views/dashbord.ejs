@@ -1,0 +1,173 @@
+<%- include('header') %>
+
+  <div class="page-wrapper">
+
+    <!-- <form method="post" enctype="multipart/form-data" action="/admin/addData">
+      <table border="1">
+        <tr>
+          <td>Student id</td>
+          <td><input type="text" name="grid" /></td>
+        </tr>
+        <tr>
+          <td>Student Name</td>
+          <td><input type="text" name="sname" /></td>
+        </tr>
+        <tr>
+          <td>Student Email</td>
+          <td><input type="email" name="semail" /></td>
+        </tr>
+        <tr>
+          <td>Student Password</td>
+          <td><input type="password" name="spassword" /></td>
+        </tr>
+        <tr>
+          <td>Student contact</td>
+          <td><input type="text" name="contact" /></td>
+        </tr>
+        <tr>
+          <td>student course</td>
+          <td>
+            <input type="checkbox" value="html" name="course" />html
+            <input type="checkbox" value="css" name="course" />css
+            <input type="checkbox" value="boostrap" name="course" />boostrap
+            <input type="checkbox" value="javascrit" name="scourse" />javascrit
+            <input type="checkbox" value="node-js" name="course" />node-js
+            <input type="checkbox" value="photoshop" name="course" />photoshop
+            <input type="checkbox" value="figma" name="course" />figma
+            <input type="checkbox" value="androd" name="course" />androd
+            <input type="checkbox" value="flutter" name="course" />flutter
+            <input type="checkbox" value="c" name="course" />c
+            <input type="checkbox" value="c++" name="course" />c++
+            <input type="checkbox" value="java" name="course" />java
+            <input type="checkbox" value="php" name="course" />php
+          </td>
+        </tr>
+        <tr>
+          <td>Student fees</td>
+          <td><input type="text" name="fees" /></td>
+        </tr>
+        <tr>
+          <td>Student photo</td>
+          <td><input type="file" name="avatar" /></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="submit" value="submit" /></td>
+        </tr>
+      </table>
+    </form> -->
+
+
+
+
+
+
+
+    <div class="container">
+      <form method="post" action="/admin/addData">
+        <h4 class="display-20"> Basic Info </h4>
+        <!-- TEXTB0X: FIRST NAME -->
+        <!-- <label for="id">Id</label> <br>
+        <div class="form-group d-flex">
+          <input class="form-control col-sm-4" type="number" name="grid" placeholder="id">
+        </div> -->
+
+        <label for="name">Name</label> <br>
+        <div class="form-group d-flex">
+          <input class="form-control col-sm-4" type="text" name="name" placeholder="Full name">
+        </div>
+
+        <label for="email">Email</label> <br>
+        <div class="form-group d-flex">
+          <input class="form-control col-sm-4" type="email" name="email" placeholder="Email">
+        </div>
+
+        <label for="password">Password</label> <br>
+        <div class="form-group d-flex">
+          <input class="form-control col-sm-4" type="password" name="password" placeholder="Password">
+        </div>
+
+        <!-- GENDER -->
+        <div class="form-group">
+          <label for="gender">Gender</label> <br>
+          <input type="radio" name="gender" value="male"> Male &nbsp;&nbsp;&nbsp;
+          <input type="radio" name="gender" value="female"> Female
+        </div>
+        <!-- Contact -->
+        <label for="contact">Contact</label> <br>
+        <div class="form-group d-flex">
+          <input class="form-control" type="text" name="contact" placeholder="Contact">
+        </div>
+
+        <div class="form-group">
+          <label for="course">Course</label> <br>
+          <input type="checkbox" value="html" name="course" /> html&nbsp;&nbsp;
+          <input type="checkbox" value="css" name="course" /> css&nbsp;&nbsp;
+          <input type="checkbox" value="boostrap" name="course" /> boostrap&nbsp;&nbsp;
+          <input type="checkbox" value="javascrit" name="course" /> javascrit&nbsp;&nbsp;
+          <input type="checkbox" value="node-js" name="course" /> node-js&nbsp;&nbsp;
+          <input type="checkbox" value="photoshop" name="course" /> photoshop&nbsp;&nbsp;
+          <input type="checkbox" value="figma" name="course" /> figma&nbsp;&nbsp;
+          <input type="checkbox" value="androd" name="course" /> androd&nbsp;&nbsp;
+          <input type="checkbox" value="flutter" name="course" /> flutter&nbsp;&nbsp;
+          <input type="checkbox" value="c" name="course" /> c&nbsp;&nbsp;
+          <input type="checkbox" value="c++" name="course" /> c++&nbsp;&nbsp;
+          <input type="checkbox" value="java" name="course" /> java&nbsp;&nbsp;
+          <input type="checkbox" value="php" name="course" /> php&nbsp;&nbsp;
+          <br>
+        </div>
+
+        <!-- Contact -->
+        <label for="fees">Fees</label> <br>
+        <div class="form-group d-flex">
+          <input class="form-control" type="text" name="fees" placeholder="Fees">
+        </div>
+
+        <label for="state">State</label> <br>
+        <!-- <div class="form-group d-flex">
+          <select class="form-control col-sm-4" name="state">
+            <option value="">---Select state----</option>
+
+            <% let state=["Gujarat","Maharashtr","Rajsthan","Punjab","Goa"]; for(let i in state) { %>
+              <option value="<%= state[i] %>">
+                <%= state[i] %>
+              </option>
+              <% } %>
+
+          </select>
+        </div> -->
+
+        <!-- <label for="contact">Image</label> <br>
+        <div class="form-group d-flex">
+          <input class="form-control" type="file" name="avatar">
+        </div> -->
+    </div>
+    <br>
+    <!-- BUTTON: SUBMIT -->
+    <button class="btn btn-primary mb-5" type="submin" value="submin">
+      Submit
+    </button>
+
+    </form>
+    <br>
+
+    <a class="btn btn-info mb-5" href="/admin/viewData">view</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a class="btn btn-info mb-5" href="/admin/profilepage">my profile</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a class="btn btn-info mb-5" href="/admin/category">catagery</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a class="btn btn-info mb-5" href="/admin/subcategory">subcategory</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a class="btn btn-info mb-5" href="/admin/viewsubcategory">viewsubcategory</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </div>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+
+
+
+  <br>
+  <br>
+  <br>
+
+  </div>
+
+  <%- include('footer') %>

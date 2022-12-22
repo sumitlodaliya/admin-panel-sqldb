@@ -1,0 +1,99 @@
+<%- include('header') %>
+
+  <div class="page-wrapper">
+
+    <!-- <form method="post" enctype="multipart/form-data" action="/admin/addData">
+      <table border="1">
+        <tr>
+          <td>Student id</td>
+          <td><input type="text" name="grid" /></td>
+        </tr>
+        <tr>
+          <td>Student Name</td>
+          <td><input type="text" name="sname" /></td>
+        </tr>
+        <tr>
+          <td>Student Email</td>
+          <td><input type="email" name="semail" /></td>
+        </tr>
+        <tr>
+          <td>Student Password</td>
+          <td><input type="password" name="spassword" /></td>
+        </tr>
+        <tr>
+          <td>Student contact</td>
+          <td><input type="text" name="contact" /></td>
+        </tr>
+        <tr>
+          <td>student course</td>
+          <td>
+            <input type="checkbox" value="html" name="course" />html
+            <input type="checkbox" value="css" name="course" />css
+            <input type="checkbox" value="boostrap" name="course" />boostrap
+            <input type="checkbox" value="javascrit" name="scourse" />javascrit
+            <input type="checkbox" value="node-js" name="course" />node-js
+            <input type="checkbox" value="photoshop" name="course" />photoshop
+            <input type="checkbox" value="figma" name="course" />figma
+            <input type="checkbox" value="androd" name="course" />androd
+            <input type="checkbox" value="flutter" name="course" />flutter
+            <input type="checkbox" value="c" name="course" />c
+            <input type="checkbox" value="c++" name="course" />c++
+            <input type="checkbox" value="java" name="course" />java
+            <input type="checkbox" value="php" name="course" />php
+          </td>
+        </tr>
+        <tr>
+          <td>Student fees</td>
+          <td><input type="text" name="fees" /></td>
+        </tr>
+        <tr>
+          <td>Student photo</td>
+          <td><input type="file" name="avatar" /></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="submit" value="submit" /></td>
+        </tr>
+      </table>
+    </form> -->
+
+
+
+
+
+
+
+    <div class="container">
+      <form method="post" action="/admin/categoryData">
+        <h4 class="display-20"> Category Info </h4>
+        <!-- TEXTB0X: FIRST NAME -->
+        <label for="id">Category name</label> <br>
+        <div class="form-group d-flex">
+          <input class="form-control col-sm-4" type="text" name="category_name" placeholder="Category name">
+        </div>
+    <!-- BUTTON: SUBMIT -->
+    <button class="btn btn-primary mb-5" type="submin" value="submin">
+      Submit
+    </button>
+
+    </form>
+    <br>
+
+    <a class="btn btn-info mb-5" href="/admin/">add</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a class="btn btn-info mb-5" href="/admin/subcategory">subcategory</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a class="btn btn-info mb-5" href="/admin/viewsubcategory">viewsubcategory</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </div>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+
+
+
+  <br>
+  <br>
+  <br>
+
+  </div>
+
+  <%- include('footer') %>

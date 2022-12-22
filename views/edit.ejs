@@ -1,0 +1,91 @@
+<%- include('header') %>
+
+
+  <div class="page-wrapper">
+
+
+
+
+
+
+    <div class="container">
+      <form method="post" action="/admin/updateData">
+        <input type="text" name="id" value="<%= single.id %>">
+        <h4 class="display-20"> Basic Info </h4>
+        <!-- TEXTB0X: FIRST NAME -->
+
+        <label for="name">Name</label> <br>
+        <div class="form-group d-flex">
+          <input class="form-control col-sm-4" type="text" value="<%= single.name %>" name="name"
+            placeholder="Full name">
+        </div>
+
+        <label for="email">Email</label> <br>
+        <div class="form-group d-flex">
+          <input class="form-control col-sm-4" type="email" value="<%= single.email %>" name="email"
+            placeholder="Email">
+        </div>
+
+        <label for="password">Password</label> <br>
+        <div class="form-group d-flex">
+          <input class="form-control col-sm-4" type="password" value="<%= single.password %>" name="password"
+            placeholder="Password">
+        </div>
+
+        <!-- GENDER -->
+        <div class="form-group">
+          <label for="gender">Gender</label> <br>
+          <input type="radio" name="gender" <% if(single.gender=="male" ) { %> checked <% } %> value="male"> Male
+            &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="gender" <% if(single.gender=="female" ) { %> checked <% } %> value="female">
+              Female
+        </div>
+        <!-- Contact -->
+        <label for="contact">Contact</label> <br>
+        <div class="form-group d-flex">
+          <input class="form-control" type="text" value="<%= single.contact %>" name="contact" placeholder="Contact">
+        </div>
+
+
+
+        <!-- Contact -->
+        <label for="fees">Fees</label> <br>
+        <div class="form-group d-flex">
+          <input class="form-control" type="text" value="<%= single.fees %>" name="fees" placeholder="Fees">
+        </div>
+
+        <!-- <label for="state">State</label> <br>
+      <div class="form-group d-flex">
+        <select class="form-control col-sm-4" name="state">
+          <option value="">---Select state----</option>
+
+          <% let state=["Gujarat","Maharashtr","Rajsthan","Punjab","Goa"]; for(let i in state) { %>
+            <option <% if(single.state == state[i]) { %> selected <% } %> value="<%= state[i] %>"> <%= state[i] %> </option>
+            <% } %>
+
+        </select>
+      </div> -->
+
+        <!-- <label for="contact">Image</label> <br>
+      <div class="form-group d-flex">
+        <input class="form-control" type="file" name="avatar">
+      </div> -->
+
+        <div class="form-group d-flex">
+          <input type="submit" value="submit" />
+        </div>
+      </form>
+    </div>
+    <br>
+    <!-- BUTTON: SUBMIT -->
+    <!-- <a class="btn btn-primary mb-5" type="submin" value="submin">
+    Submit
+  </a> -->
+
+
+
+
+
+  </div>
+
+  <%- include('footer') %>

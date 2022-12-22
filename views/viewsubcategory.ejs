@@ -1,0 +1,48 @@
+<%- include('header') %>
+
+
+  <div class="page-wrapper">
+
+    <html>
+
+    <body>
+      <div class="container crud-table" ng-app="myApp" ng-controller="namesCtrl">
+        <div class="clearfix">
+          <div class="form-inline pull-left">
+            <a href="/admin/" class="btn btn-success" ng-click="addUser()"><span class="glyphicon glyphicon-plus">
+              </span>Add more user</a>
+          </div>
+
+        </div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th ng-click="orderBy('name')">Id</th>
+              <th ng-click="orderBy('country')">Name</th>
+            </tr>
+          </thead>
+          <tbody class="text-center">
+            <% for(let i in subcategory) { %>
+              <tr>
+                <td>
+                  <%= subcategory[i].category_id.category_name %>
+                </td>
+                <td>
+                  <%= subcategory[i].sub_category_name %>
+                </td>
+              </tr>
+              <% } %>
+          </tbody>
+        </table>
+
+
+
+      </div>
+    </body>
+
+    </html>
+
+
+  </div>
+
+  <%- include('footer') %>
