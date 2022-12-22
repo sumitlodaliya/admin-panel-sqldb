@@ -72,11 +72,11 @@
           <select class="form-control col-sm-4" name="category_name">
             <option value="">---select category---</option>
             <% for(let i in subcate) { %>
-                <option value="<%= subcate[i]._id %>">
-                    <%= subcate[i].category_name %>
-                </option>
-            <% } %>
-        </select>
+              <option value="<%= subcate[i].category_name %>">
+                <%= subcate[i].category_name %>
+              </option>
+              <% } %>
+          </select>
         </div>
 
         <label for="id">Sub_category name</label> <br>
