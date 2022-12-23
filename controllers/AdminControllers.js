@@ -140,6 +140,7 @@ module.exports.subcategoryData = (req, res) => {
     console.log(insertquery);
 
     mysql.query(insertquery, (err, data) => {
+        console.log(data);
         if (err) {
             console.log(err);
         }
@@ -148,12 +149,19 @@ module.exports.subcategoryData = (req, res) => {
 }
 
 
-// // View sub category
-// module.exports.viewsubcategory = (req,res)=> {
-//     adminsubcategory.find().populate("category_id").then(subcate => {
-//         console.log(subcate);
-//         return res.render('viewsubcategory',{
-//             subcategory : subcate
-//         })
-//     })
-// }
+// View sub category
+module.exports.viewsubcategory = (req,res)=> {
+
+    // let viewstate = "SELECT state.id,state_name,city.city FROM state INNER JOIN city ON state.id = city.state_id";
+    let viewstate = "SELECT category.id,category_name,subcategory.id,sub_category_name,category_id FROM category INNER JOIN subcategory ON category.category_name = subcategory.category_id";
+    mysql.query(viewstate,(err,subcate)=>{
+        console.log(subcate);
+        if(err)
+        {
+            console.log("data not view");
+        }
+        return res.render('viewsubcategory',{
+            subcategory : subcate
+        })
+    });
+}

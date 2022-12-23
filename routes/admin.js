@@ -31,6 +31,6 @@ routes.post('/categoryData',admincontroller.categoryData);
 
 routes.get('/subcategory',admincontroller.subcategory);
 routes.post('/subcategoryData',admincontroller.subcategoryData);
-// routes.get('/viewsubcategory',admincontroller.viewsubcategory);
+routes.get('/viewsubcategory',admincontroller.viewsubcategory);
 
 module.exports = routes;

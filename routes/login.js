@@ -12,7 +12,7 @@ console.log("admin route is start");
 routes.get('/', logincontroller.login);
 
 // routes.post('/loginData',logincontroller.loginData);
-routes.post('/loginData', passport.authenticate('local', { failureRedirect: '/login' }), logincontroller.loginData);
+routes.post('/loginData', passport.authenticate('local', { failureRedirect: '/login/' }), logincontroller.loginData);
 
 routes.get('/forgotemail',logincontroller.forgotemail);
 routes.post('/forgotemaildata',logincontroller.forgotemaildata);
