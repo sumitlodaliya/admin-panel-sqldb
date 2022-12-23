@@ -62,20 +62,6 @@ module.exports.category = (req, res) => {
 
 
 module.exports.categoryData = (req, res) => {
-    // admincategory.create({
-
-    //     category_name : req.body.category_name
-
-    // },(err,data)=>{
-    //     if(err)
-    //     {
-    //         console.log("category not add");
-    //         return false;
-    //     }
-    //     console.log("category added");
-    //     return res.redirect('back');
-    // })
-
 
     let category_name = req.body.category_name;
     let insertquery = "INSERT INTO `category`(`category_name`) VALUES ('" + category_name + "')";
@@ -90,15 +76,6 @@ module.exports.categoryData = (req, res) => {
 
 
 module.exports.subcategory = (req, res) => {
-    // admincategory.find({}, (err, categoryData) => {
-    //     if (err) {
-    //         console.log("category not fetch");
-    //         return false;
-    //     }
-    //     return res.render('subcategory', {
-    //         subcate: categoryData
-    //     });
-    // })
 
     let viewquery = "SELECT * FROM `category`";
 
@@ -116,22 +93,6 @@ module.exports.subcategory = (req, res) => {
 
 
 module.exports.subcategoryData = (req, res) => {
-
-    // adminsubcategory.create({
-    //     sub_category_name : req.body.sub_category_name,
-    //     category_id: req.body.category_name
-    // },(err,data)=>{
-    //     if(err)
-    //     {
-    //         console.log("sub category not add");
-    //         return false;
-    //     }
-    //     console.log("subcategory add");
-    //     console.log(data);
-    //     return res.redirect('back');
-    // })
-
-
 
     let sub_category_name = req.body.sub_category_name;
     let category_id = req.body.category_name;

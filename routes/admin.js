@@ -15,7 +15,7 @@ routes.get('/logout',admincontroller.logout);
 
 
 routes.post('/addData', crudcontroller.addData);
-// routes.get('/viewData', crudcontroller.viewData);
+routes.get('/viewData', crudcontroller.viewData);
 // // params
 routes.get('/deleteData/:id', crudcontroller.deleteData);
 routes.get('/editData/:id', crudcontroller.editData);
