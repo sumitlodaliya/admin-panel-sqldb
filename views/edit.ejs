@@ -46,6 +46,24 @@
           <input class="form-control" type="text" value="<%= single.contact %>" name="contact" placeholder="Contact">
         </div>
 
+        <div class="form-group">
+          <label for="course">Course</label> <br>
+          <input type="checkbox" <% if(single.course.includes("html")) { %> checked <% } %> value="html" name="course" /> html&nbsp;&nbsp;
+          <input type="checkbox" <% if(single.course.includes("css")) { %> checked <% } %> value="css" name="course" /> css&nbsp;&nbsp;
+          <input type="checkbox" <% if(single.course.includes("boostrap")) { %> checked <% } %> value="boostrap" name="course" /> boostrap&nbsp;&nbsp;
+          <input type="checkbox" <% if(single.course.includes("javascrit")) { %> checked <% } %> value="javascrit" name="course" /> javascrit&nbsp;&nbsp;
+          <input type="checkbox" <% if(single.course.includes("node-js")) { %> checked <% } %> value="node-js" name="course" /> node-js&nbsp;&nbsp;
+          <input type="checkbox" <% if(single.course.includes("photoshop")) { %> checked <% } %> value="photoshop" name="course" /> photoshop&nbsp;&nbsp;
+          <input type="checkbox" <% if(single.course.includes("figma")) { %> checked <% } %> value="figma" name="course" /> figma&nbsp;&nbsp;
+          <input type="checkbox" <% if(single.course.includes("androd")) { %> checked <% } %> value="androd" name="course" /> androd&nbsp;&nbsp;
+          <input type="checkbox" <% if(single.course.includes("flutter")) { %> checked <% } %> value="flutter" name="course" /> flutter&nbsp;&nbsp;
+          <input type="checkbox" <% if(single.course.includes("c")) { %> checked <% } %> value="c" name="course" /> c&nbsp;&nbsp;
+          <input type="checkbox" <% if(single.course.includes("c++")) { %> checked <% } %> value="c++" name="course" /> c++&nbsp;&nbsp;
+          <input type="checkbox" <% if(single.course.includes("java")) { %> checked <% } %> value="java" name="course" /> java&nbsp;&nbsp;
+          <input type="checkbox" <% if(single.course.includes("php")) { %> checked <% } %> value="php" name="course" /> php&nbsp;&nbsp;
+          <br>
+        </div>
+
 
 
         <!-- Contact -->

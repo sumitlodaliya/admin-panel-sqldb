@@ -28,6 +28,7 @@
               <th ng-click="orderBy('Contact')">Contact</th>
               <th ng-click="orderBy('Course')">Course</th>
               <th ng-click="orderBy('Fees')">Fees</th>
+              <th ng-click="orderBy('image')">Fees</th>
               <th ng-click="orderBy('Action')">Action</th>
             </tr>
           </thead>
@@ -52,6 +53,9 @@
                 </td>
                 <td>
                   <%=record[i].fees %>
+                </td>
+                <td>
+                  <%=record[i].image %>
                 </td>
                 <td>
                   <a href="/admin/deleteData/<%= record[i].id %>" class="btn btn-danger"
